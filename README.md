@@ -1,5 +1,7 @@
 # 데이터분석 캡스톤 디자인 SWCON323-103
 
+# 이찬, 장준필
+
 # 📱 Smartphone-Specific Anomaly Detection using Generative AI
 
 ### Zero-Shot Multimodal LLM 기반 스마트폰 미세 결함 탐지
