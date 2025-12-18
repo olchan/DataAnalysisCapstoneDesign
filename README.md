@@ -54,6 +54,21 @@ fine-grained anomaly(미세 스크래치, 번인, tiny dent 등)를 충분히 �
 본 연구의 도메인 파인튜닝 및 성능 검증에 활용되었다.
 
 ---
+## **Code Instruction**
+
+**Fine-tuning LTFM layer of Anomaly OV with generative data.ipynb**
+
+- (BASE) Pretrained Anomaly OV : LTFM Layer 성능 평가
+- Print Anomaly Score & Heatmap
+- fine-tuned LTFM Layer with Gemini generated Image 성능평가
+-  Pareto + min(P,R) 방식으로 Threshold Tuning
+-  Drawing Bouding Box for Anomaly Part
+
+**Performance comparison code when excluding generated data.ipynb**
+
+- fine-tuned LTFM Layer without Gemini generated Image 성능평가
+
+---
 
 ## **접근 방법**
 
@@ -107,7 +122,6 @@ fine-grained anomaly(미세 스크래치, 번인, tiny dent 등)를 충분히 �
 </p>
 
 
-
 ### **품질 보고서 결과 비교**
 
 • 공통점:이상 점수 기반 품질 상태를 Abnormal로 판단 + 전면 좌측 큰 손상을 주요 결함으로 기술
@@ -116,11 +130,18 @@ fine-grained anomaly(미세 스크래치, 번인, tiny dent 등)를 충분히 �
 
 ---
 
-## **탐지 성능 및 Reasoning 품질 향상**
+## **Conclusion & Future Work**
+좋아, **README용으로 딱 깔끔한 분량**으로 써줄게.
+(각각 4줄, 과제·연구 레포에 자연스럽게 맞게)
 
-Fine-tuned LTFM은 아래와 같은 개선을 보였다:
+---
 
-* 미세 결함이 존재하는 후보 영역(ROI)을 **더 정확하게 식별**
-* MLLM이 결함의 **위치, 형태, 영향도**를 보다 세밀하고 일관된 방식으로 기술
-* 탐지 결과와 품질 보고서 생성 과정이 유기적으로 연동되어
-  **스마트폰 QC 자동화 시스템의 실용성과 신뢰성이 강화됨**
+## Conclusion
+
+본 프로젝트는 스마트폰 품질 검사 환경에서 발생하는 **미세 결함 탐지 문제**를 해결하기 위해 Multimodal LLM 기반 **Anomaly-OneVision의 LTFM 모듈을 스마트폰 도메인에 맞게 파인튜닝**하였다. 또한 **Gemini 3 기반 생성형 데이터 증강**을 통해 데이터 희소성과 클래스 불균형 문제를 완화하였다. 그 결과, pretrained baseline 대비 **F1-score를 유의미하게 향상**시키며 실무 적용 가능성을 입증하였다.
+
+---
+
+## Future Work
+
+향후 연구에서는 **더 다양한 스마트폰 결함 유형**과 실제 공정 환경(반사, 조명 변화 등)을 고려한 데이터 확장이 필요하다. 또한 **추론 속도 개선 및 모델 경량화**를 통해 실제 QC 라인 적용 가능성을 높일 수 있다. 설명 가능한 AI 관점에서 **탐지 근거 시각화와 텍스트 reasoning의 정합성 평가**도 중요한 과제가 될 것이다. 마지막으로 **기종·세대 간 도메인 차이를 완화하는 일반화 기법**을 적용해 성능 안정성을 강화할 수 있다.
