@@ -98,6 +98,14 @@ fine-grained anomaly(미세 스크래치, 번인, tiny dent 등)를 충분히 �
   → 생성형 데이터가 **미세 결함 탐지와 Recall 개선**에 실질적으로 기여
 
 ## **Demo**
+<p align="center">
+  <img src="Results1.png" width="700">
+</p>
+
+<p align="center">
+  <img src="Results2.png" width="700">
+</p>
+
 
 
 ### **품질 보고서 결과 비교**
