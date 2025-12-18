@@ -97,6 +97,9 @@ fine-grained anomaly(미세 스크래치, 번인, tiny dent 등)를 충분히 �
   Real Only 대비 +1.10%, Base 대비 +3.75% 상승
   → 생성형 데이터가 **미세 결함 탐지와 Recall 개선**에 실질적으로 기여
 
+## **Demo**
+
+
 ---
 
 ## **탐지 성능 및 Reasoning 품질 향상**
